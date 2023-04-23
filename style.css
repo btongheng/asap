@@ -1,0 +1,93 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+    --bg-color: #fff;
+    --text-color: #fff;
+    --box-color: #101010;
+    --hover: #d22c1f;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins";
+    background-color: var(--bg-color);
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.box{
+    height: 100vh;
+    width: fit-content;
+    background-color: var(--box-color);
+    position: relative;
+    text-align: left;
+    z-index: 1;
+    opacity: 0;
+    left: -500px;
+    pointer-events: none;
+    transition: 0.3s;
+}
+.active_box{
+    opacity: 1;
+    left: 0px;
+    pointer-events: fill;
+}
+.menu_icon_box{
+    z-index: 2;
+    width: fit-content;
+    height: auto;
+    /* background-color: #fff; */
+    margin: 30px;
+    position: absolute;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.line1 , .line2 , .line3{
+    width: 36px;
+    height: 4px;
+    margin: 8px;
+    background-color: #000;
+    border-radius: 50px;
+    transition: 0.2s;
+}
+.active .line1{
+    transform: translate(0px , 12px)rotate(45deg);
+    background-color: #fff;
+}
+.active .line2{
+    opacity: 0;
+}
+.active .line3{
+    transform: translate(0px , -12px)rotate(-45deg);
+    background-color: #fff;
+}
+nav{
+    padding-top: 100px;
+}
+nav ul{
+    margin: 0px 30px;
+}
+nav ul li{
+    list-style: none;
+    margin-bottom: 30px;
+}
+nav ul li a:hover{
+    color: var(--hover);
+    border-radius: 8px;
+}
+nav ul li a{
+    color: var(--text-color);
+    font-size: 28px;
+    display: block;
+    padding: 8px 36px 8px 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+
+}
